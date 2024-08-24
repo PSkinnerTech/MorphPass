@@ -2,6 +2,7 @@
 
 A Ticket app built with MorphL2 and Web3Auth
 
-# Team
+## Team
 Patrick Skinner - [Github](https://github.com/PSkinnerTech) | [X](https://x.com/PSkinnerTech)
-Stephanie "Nani" Skinner - [Github](https://github.com/NaniSkinner) | [X](https://x.com/NaniSkinner)# MorphPass
+<br>
+Stephanie "Nani" Skinner - [Github](https://github.com/NaniSkinner) | [X](https://x.com/NaniSkinner)
