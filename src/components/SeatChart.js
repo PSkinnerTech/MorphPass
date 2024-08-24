@@ -6,7 +6,7 @@ import Seat from './Seat'
 // Import Assets
 import close from '../assets/close.svg'
 
-const SeatChart = ({ occasion, tokenMaster, provider, setToggle }) => {
+const SeatChart = ({ occasion, morphPass, provider, setToggle }) => {
 
   return (
     <div className="occasion">

@@ -8,7 +8,7 @@ import Card from './components/Card'
 import SeatChart from './components/SeatChart'
 
 // ABIs
-import TokenMaster from './abis/TokenMaster.json'
+import MorphPass from './abis/morphPass.json'
 
 // Config
 import config from './config.json'
@@ -18,7 +18,7 @@ function App() {
     <div>
       <header>
 
-        <h2 className="header__title"><strong>Welcome to Tokenmaster</strong></h2>
+        <h2 className="header__title"><strong>Welcome to morphPass</strong></h2>
       </header>
 
     </div>
