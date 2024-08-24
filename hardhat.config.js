@@ -3,16 +3,16 @@ require("dotenv").config();
 require("@nomicfoundation/hardhat-toolbox");
 
 const config = {
-  solidity: {
-    version: "0.8.24",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
-      },
-      evmVersion: "london"
-    }
-  },
+    solidity: {
+      version: "0.8.24",
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 200,
+        },
+        evmVersion: "london"
+      }
+    },
   networks: {
     morphTestnet: {
       url: process.env.MORPH_TESTNET_URL || "",

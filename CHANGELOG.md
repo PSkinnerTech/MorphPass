@@ -34,4 +34,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.1] - 2024-08-24 13:30
 ### Added
-- Added a changelog to the project. -@PSkinnerTech
+- Added a changelog to the project. 
+@PSkinnerTech
+
+## [1.0.2] - 2024-08-24 14:30
+### Added
+- Added several dev dependencies that are contract related.
+
+### Changed
+- Updated the solidity and hardhat versions.
+@PSkinnerTech
