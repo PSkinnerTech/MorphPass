@@ -44,3 +44,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated the solidity and hardhat versions.
 @PSkinnerTech
+
+## [1.0.3] - 2024-08-25 16:55
+
+### Added
+- Completed MorphPass v1 Smart Contract and Deployed it to Morph Testnet
+- Updated configs to match newly deployed contract
+
