@@ -9,4 +9,4 @@ Stephanie "Nani" Skinner - [Github](https://github.com/NaniSkinner) | [X](https:
 
 ## Smart Contract Address
 
-Deployed MorphPass Contract at: 0x270c2585C68b8ee996b56Fa0B16d9d32AFE3E6A4
+Deployed MorphPass v1 Contract at: 0x270c2585C68b8ee996b56Fa0B16d9d32AFE3E6A4
