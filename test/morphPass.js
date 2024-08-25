@@ -63,4 +63,20 @@ describe("MorphPass", () => {
             expect(instance.location).to.equal(INSTANCE_LOCATION)
         })
     })
+
+    describe("Minting", () => {
+        const ID = 1
+        const SEAT = 50
+        const AMOUNT = ethers.parseUnits('1', 'ether')
+
+        beforeEach(async () => {
+            const transaction = await morphPass.connect(buyer).mint(ID, SEAT, { value: AMOUNT })
+            await transaction.wait()
+        })
+
+        it("Updates Number of Tickets Available", async () => {
+            const instance = await morphPass.getInstance(1)
+            expect(instance.tickets).to.equal(INSTANCE_MAX_TICKETS - 1)
+        })
+    })
 })
