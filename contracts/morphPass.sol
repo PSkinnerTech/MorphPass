@@ -53,7 +53,7 @@ contract MorphPass is ERC721 {
             _name,
             totalInstances,
             _cost,
-            100, // Initial tickets sold
+            _maxTickets,
             _maxTickets,
             _time,
             _date,
@@ -62,6 +62,13 @@ contract MorphPass is ERC721 {
     }
 
     function mint(uint256 _id, uint256 _seat) public payable {
+        require(_id != 0);
+        require(_id <= totalInstances);
+
+        require(msg.value >= instances[_id].cost);
+
+        require(seatTaken[_id][_seat] == address(0));
+        require(_seat <= instances[_id].maxTickets);
 
         instances[_id].tickets -= 1;
 
@@ -77,6 +84,15 @@ contract MorphPass is ERC721 {
 
     function getInstance(uint256 _id) public view returns (Instance memory) {
         return instances[_id];
+    }
+
+    function getSeatsTaken(uint256 _id) public view returns (uint256[] memory) {
+        return seatsTaken[_id];
+    }
+
+    function withdraw() public onlyOwner {
+        (bool success, ) = owner.call{value: address(this).balance}("");
+        require(success);
     }
 
 }

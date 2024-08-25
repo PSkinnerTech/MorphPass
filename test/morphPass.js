@@ -78,5 +78,55 @@ describe("MorphPass", () => {
             const instance = await morphPass.getInstance(1)
             expect(instance.tickets).to.equal(INSTANCE_MAX_TICKETS - 1)
         })
+
+        it("Updates Ticket Purchase Status", async () => {
+            const status = await morphPass.hasTicket(ID, buyer.address)
+            expect(status).to.equal(true)
+        })
+
+        it("Updates Unique Ticket Availability Status", async () => {
+            const owner = await morphPass.seatTaken(ID, SEAT)
+            expect(owner).to.equal(buyer.address)
+        })
+
+        it("Updates Total Unique Ticket Status", async () => {
+            const seats = await morphPass.getSeatsTaken(ID)
+            expect(seats.length).to.equal(1)
+            expect(seats[0]).to.equal(SEAT)
+        })
+
+        it("Updates Contract Balance", async () => {
+            const balance = await ethers.provider.getBalance(await morphPass.getAddress())
+            expect(balance).to.equal(AMOUNT)
+        })
     })
+
+    describe("Withdrawing", () => {
+        const ID = 1
+        const SEAT = 50
+        const AMOUNT = ethers.parseEther("1")  // Changed from utils.parseUnits to parseEther
+        let balanceBefore
+        
+        beforeEach(async () => {
+            balanceBefore = await ethers.provider.getBalance(creator.address)
+    
+            let transaction = await morphPass.connect(buyer).mint(ID, SEAT, { value: AMOUNT })
+            await transaction.wait()
+    
+            transaction = await morphPass.connect(creator).withdraw()
+            await transaction.wait()
+        })
+    
+        it('Updates the owner balance', async () => {
+            const balanceAfter = await ethers.provider.getBalance(creator.address)
+            expect(balanceAfter).to.be.greaterThan(balanceBefore)
+        })
+    
+        it('Updates the contract balance', async () => {
+            const contractAddress = await morphPass.getAddress()
+            const balance = await ethers.provider.getBalance(contractAddress)
+            expect(balance).to.equal(0)
+        })
+    })
+
 })
