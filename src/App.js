@@ -16,11 +16,7 @@ import config from "./config.json";
 function App() {
   return (
     <div>
-      <header>
-        <h2 className="header__title">
-          <strong>Welcome to morphPass</strong>
-        </h2>
-      </header>
+      <h1>Hello, world!</h1>
     </div>
   );
 }
