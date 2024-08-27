@@ -61,9 +61,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Updated ethers.js usage in App.js and Navigation.js to be compatible with ethers v6
-- Corrected provider initialization to properly connect to the Morph networ
+- Corrected provider initialization to properly connect to the Morph network
 - developed error handling and network detection in MorphL2 data loading
-Note: All changes as of the date of the logged changes are in the `frontend` branch.
+<br>
+__Note: All changes as of the date of the logged changes are in the `frontend` branch.__
 <br>
 [@PSkinnerTech](https://github.com/PSkinnerTech)
 
