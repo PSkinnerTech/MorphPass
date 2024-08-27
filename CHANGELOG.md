@@ -36,16 +36,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added a changelog to the project. 
 <br>
-@PSkinnerTech
+[@PSkinnerTech](https://github.com/PSkinnerTech)
 
 ## [1.0.2] - 2024-08-24 14:30
 ### Added
 - Added several dev dependencies that are contract related.
+<br>
+[@PSkinnerTech](https://github.com/PSkinnerTech)
 
 ### Changed
 - Updated the solidity and hardhat versions.
 <br>
-@PSkinnerTech
+[@PSkinnerTech](https://github.com/PSkinnerTech)
 
 ## [1.0.3] - 2024-08-25 16:55
 
@@ -53,5 +55,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Completed MorphPass v1 Smart Contract and Deployed it to Morph Testnet
 - Updated configs to match newly deployed contract
 <br>
-@PSkinnerTech
+[@PSkinnerTech](https://github.com/PSkinnerTech)
+
+## [1.0.4] - 2024-8-27 17:18
+
+### Fixed
+- Updated ethers.js usage in App.js and Navigation.js to be compatible with ethers v6
+- Corrected provider initialization to properly connect to the Morph networ
+- developed error handling and network detection in MorphL2 data loading
+Note: All changes as of the date of the logged changes are in the `frontend` branch.
+<br>
+[@PSkinnerTech](https://github.com/PSkinnerTech)
 
