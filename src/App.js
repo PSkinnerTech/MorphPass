@@ -14,6 +14,16 @@ import MorphPass from "./abis/morphPass.json";
 import config from "./config.json";
 
 function App() {
+  const loadBlockchainData = async () => {
+    const accounts = await window.ethereum.request({
+      method: "eth_requestAccounts",
+    });
+    console.log(accounts);
+  };
+
+  useEffect(() => {
+    loadBlockchainData();
+  }, []);
   return (
     <div>
       <h1>Hello, world!</h1>
